@@ -1,0 +1,20 @@
+<div class="col-md-6 user-container">
+    <h2 class="text-center">Add Content</h2>
+    <form [FormGroup] ="addForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label>periodName:</label>
+        <input type="text" formControlName="periodName" placeholder="periodName" name="periodName" class="form-control" id="periodName">
+      </div>
+   
+      <div class="form-group">
+        <label>parentPeriodId:</label>
+        <input formControlName="parentPeriodId" placeholder=" parentPeriodId" name="parentPeriodId" class="form-control" id="parentPeriodId">
+      </div>
+      
+      <div class="form-group">
+        <label>periodNum:</label>
+        <input formControlName="periodNum" placeholder=" periodNum" name="periodNum" class="form-control" id="periodNum">
+      </div>
+      <button class="btn btn-success">Add</button>
+    </form>
+  </div>

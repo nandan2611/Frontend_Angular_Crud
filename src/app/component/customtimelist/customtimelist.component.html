@@ -1,0 +1,32 @@
+<!-- <button class="btn btn-danger" style="width:100px" (click)="goTo()">Home</button> -->
+<div class="col-md-6 user-container">
+    <h2 style="margin: auto"> Content Details</h2>
+    
+     <table class="table table-striped">
+      <thead>
+ 
+      <tr>
+        <th class="hidden">customTimePeriodId</th>
+        <th>parentPeriodId</th>
+        <th>periodNum</th>
+        <th>periodName</th>
+    
+      </tr>
+      </thead> 
+      <tbody>
+    
+      <tr *ngFor="let content of users">
+        <td class="hidden">{{content.customTimePeriodId}}</td>
+        <td>{{content.parentPeriodId}}</td>  
+        <td>{{content.periodNum}}</td>
+        <td>{{content.periodName}}</td> 
+
+        <td><button class="btn btn-success" (click)="deleteContent(content)"> Delete</button>
+            <button class="btn btn-success" (click)="editContent(content)" class='btn btn-info'  
+            data-toggle="modal" data-target="#myModal">Update</button> </td>
+        </tr>
+        </tbody>
+      </table>
+    
+    </div>
+   
